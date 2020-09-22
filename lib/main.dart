@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Dino extends StatefulWidget {
   @override
@@ -6,8 +8,26 @@ class Dino extends StatefulWidget {
 }
 
 class _DinoState extends State<Dino> {
+  bool _initialized = false;
+  bool _error = false;
+  void initializeFlutterFire() async {
+    try {
+      await Firebase.initializeApp();
+      setState(() {
+        _initialized = true;
+      });
+    } catch (e) {
+      _error = true;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (!_initialized) {
+      return Scaffold(
+        body: Center(child: SpinKitCubeGrid()),
+      );
+    }
     return Container();
   }
 }
