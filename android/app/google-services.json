@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "747699933680",
+    "firebase_url": "https://dinoauth.firebaseio.com",
+    "project_id": "dinoauth",
+    "storage_bucket": "dinoauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747699933680:android:8c47da2b1664b2bd974d35",
+        "android_client_info": {
+          "package_name": "com.example.dinoauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747699933680-oh1nj7gcccf299nlc0vuoj1mh2ra7dsn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwodS_HYRmfnkRpo4sKtSSQ8lUD3lWGkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747699933680-oh1nj7gcccf299nlc0vuoj1mh2ra7dsn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
