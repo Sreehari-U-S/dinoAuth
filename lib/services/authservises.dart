@@ -8,7 +8,12 @@ class AuthServices {
     return false;
   }
 
-  static createUserwithEmailandPassword(String email, String password) {
-    try {} catch (e) {}
+  static createUserwithEmailandPassword({String email, String password}) async {
+    try {
+      UserCredential userCredential = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: null, password: null);
+    } on FirebaseAuthException catch (e) {
+      print(e.toString());
+    }
   }
 }

@@ -1,3 +1,6 @@
+import 'package:dinoauth/home.dart';
+import 'package:dinoauth/login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -22,13 +25,23 @@ class _DinoState extends State<Dino> {
   }
 
   @override
+  void initState() {
+    initializeFlutterFire();
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     if (!_initialized) {
       return Scaffold(
-        body: Center(child: SpinKitCubeGrid()),
+        body: Center(
+            child: SpinKitCubeGrid(
+          color: Colors.yellow,
+        )),
       );
     }
-    return Container();
+    if (FirebaseAuth.instance.currentUser != null) return Home();
+    return Login();
   }
 }
 
