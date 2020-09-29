@@ -11,7 +11,7 @@ class AuthServices {
   static createUserwithEmailandPassword({String email, String password}) async {
     try {
       UserCredential userCredential = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(email: null, password: null);
+          .createUserWithEmailAndPassword(email: email, password: password);
     } on FirebaseAuthException catch (e) {
       print(e.toString());
     }

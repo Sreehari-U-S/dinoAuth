@@ -40,7 +40,8 @@ class _DinoState extends State<Dino> {
         )),
       );
     }
-    if (FirebaseAuth.instance.currentUser != null) return Home();
+    if (FirebaseAuth.instance.currentUser != null)
+      return Home(Email: FirebaseAuth.instance.currentUser.email);
     return Login();
   }
 }
